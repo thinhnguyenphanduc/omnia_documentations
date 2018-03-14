@@ -1,0 +1,23 @@
+﻿{
+  "sortOrder": [
+    "/ReleaseNotes/en-us/omf-january-2018/index.html",
+    "/ReleaseNotes/en-us/omi-january-2018/index.html",
+    "/ReleaseNotes/en-us/omf-december-2017/index.html",
+    "/ReleaseNotes/en-us/omi-december-2017/index.html",
+    "/ReleaseNotes/en-us/omf-november-2017/index.html",
+    "/ReleaseNotes/en-us/omi-november-2017/index.html",
+    "/ReleaseNotes/en-us/omf-october-2017/index.html",
+    "/ReleaseNotes/en-us/omi-october-2017/index.html"
+  ],
+  "references": [
+    {
+      "PackageId": "09F7E33F-3274-42B7-9C3C-1A6410E16C77",
+      "Nodes": [
+        "/ReleaseNotes/en-us/omf-january-2018/index.html",
+        "/ReleaseNotes/en-us/omf-december-2017/index.html",
+        "/ReleaseNotes/en-us/omf-november-2017/index.html",
+        "/ReleaseNotes/en-us/omf-october-2017/index.html"
+      ]
+    }
+  ]
+}

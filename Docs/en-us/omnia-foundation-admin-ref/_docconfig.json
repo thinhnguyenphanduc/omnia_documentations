@@ -1,0 +1,24 @@
+﻿{
+  "sortOrder": [
+    "/Docs/en-us/omnia-foundation-admin-ref/system-ref/index.html",
+    "/Docs/en-us/omnia-foundation-admin/targeting-definitions/index.html",
+    "/Docs/en-us/omnia-foundation-admin/site-templates/index.html",
+    "/Docs/en-us/omnia-foundation-admin/navigation/index.html",
+    "/Docs/en-us/omnia-foundation-admin/page-footer/index.html",
+    "/Docs/en-us/omnia-foundation-admin/statistics-provider/index.html",
+    "/Docs/en-us/omnia-foundation-admin/image-picker-settings/index.html"
+  ],
+  "references": [
+    {
+      "PackageId": "09F7E33F-3274-42B7-9C3C-1A6410E16C77",
+      "Nodes": [
+    "/Docs/en-us/omnia-foundation-admin/targeting-definitions/index.html",
+    "/Docs/en-us/omnia-foundation-admin/site-templates/index.html",
+    "/Docs/en-us/omnia-foundation-admin/navigation/index.html",
+    "/Docs/en-us/omnia-foundation-admin/page-footer/index.html",
+    "/Docs/en-us/omnia-foundation-admin/statistics-provider/index.html",
+    "/Docs/en-us/omnia-foundation-admin/image-picker-settings/index.html"
+      ]
+    }
+  ]
+}

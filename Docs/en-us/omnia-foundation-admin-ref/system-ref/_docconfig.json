@@ -1,0 +1,22 @@
+﻿{
+  "sortOrder": [
+    "/Docs/en-us/omnia-foundation-admin/system/settings/index.html",
+    "/Docs/en-us/omnia-foundation-admin/system/Permissions/index.html",
+    "/Docs/en-us/omnia-foundation-admin/system/Queues/index.html",
+    "/Docs/en-us/omnia-foundation-admin/system/Logs/index.html",
+    "/Docs/en-us/omnia-foundation-admin/system/Extensions/index.html"
+  ]
+  ,
+  "references": [
+    {
+      "PackageId": "09F7E33F-3274-42B7-9C3C-1A6410E16C77",
+      "Nodes": [
+    "/Docs/en-us/omnia-foundation-admin/system/Extensions/index.html",
+    "/Docs/en-us/omnia-foundation-admin/system/Logs/index.html",
+    "/Docs/en-us/omnia-foundation-admin/system/Permissions/index.html",
+    "/Docs/en-us/omnia-foundation-admin/system/Queues/index.html",
+    "/Docs/en-us/omnia-foundation-admin/system/settings/index.html"
+      ]
+    }
+  ]
+}
