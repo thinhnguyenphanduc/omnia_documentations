@@ -1,0 +1,106 @@
+﻿<h1 id="page-designer">Page Designer</h1>
+<p>An administrator or an editor with the correct permissions can work with Page Layouts. There are two levels which will normally need different permissions:</p>
+<ul>
+<li>Layout Designer: Normally used by an administrator, to create layouts to be used in Page Designer.</li>
+<li>Page Designer: Normally used by an administrator or an editor to place controls (blocks) in the layout. A block can for example be Page Contents, Related Links or a Banner.</li>
+</ul>
+<p>The prerequisite is that the page is a <strong>Quick Page</strong>.</p>
+<p>You can't use this kind of Page Layout on a standard Sharepoint Page - a page where &quot;Enable legacy web parts&quot; is on.</p>
+<p>Here we will describe the Page Designer. For an instruction on how to use the Layout Designer, see:</p>
+<p><a href="/Docs/en-us/omnia-intranet-admin/glue-layout/index.html">The Layout Designer</a></p>
+<p>A very important difference between a Quick Page and a standard Sharepoint is what the editor can see. The end user will always see the same thing: the latest published version.</p>
+<ul>
+<li>For a standard Sharepoint page an editor will see the latest edited version, regardless of who made the changes, and regardless of wether that version is published or not.</li>
+<li>For a Quick Page an editor will always see the latest <strong>published</strong> version and must open the page for editing to see the latest edited version.</li>
+</ul>
+<h2 id="selecting-another-page-layout">Selecting another Page Layout</h2>
+<p>You can select any available Page Layout for a page and you can add or delete blocks (controls) in the different Zones in a Page Layout.</p>
+<p>To select another Page Layout, do the following:</p>
+<ol>
+<li>Go the page.</li>
+<li>Show Edit Icons.</li>
+</ol>
+<p><img src="../../Images/page-designer-new1.png" alt="Show Edit Icons" /></p>
+<p>If you have the correct permissions something like this will be shown:</p>
+<p><img src="../../Images/page-designer-new2.png" alt="Page Designer" /></p>
+<ol start="2">
+<li>Open the &quot;Layout&quot; list and select layout.</li>
+</ol>
+<p><img src="../../Images/page-designer-new3.png" alt="Select Page Layout" /></p>
+<ol start="3">
+<li>Make changes to the blocks, if necessary (see below).</li>
+<li>Publish the page.</li>
+</ol>
+<p><img src="../../Images/page-designer-new4.png" alt="Publish Page with layout" /></p>
+<h2 id="working-with-blocks">Working with blocks</h2>
+<p>When you have opened a Quick Page to edit the Page Layout, you can work with the blocks as described in this section. Don't forget to publish when you're finished!</p>
+<h3 id="adding-a-new-block">Adding a new block</h3>
+<p>To add a new block:</p>
+<ol>
+<li>Open the Block list.</li>
+</ol>
+<p><img src="../../Images/page-designer-blocklist.png" alt="Open Block List" /></p>
+<ol start="2">
+<li>Drag the block to a Zone, and to the place you want in the Zone.</li>
+</ol>
+<p>When you start dragging you can see where the zones are and which blocks are already in place in a Zone. You can place the new block anywhere withing a Zone, normally both over and under other blocks.</p>
+<p>When you drag the new block to a place where it's possible to place it, a dotted line is shown:</p>
+<p><img src="../../Images/drag-block-new2.png" alt="Drag block" /></p>
+<ol start="3">
+<li>Just &quot;drop&quot; the block when you have dragged it where you want it.</li>
+</ol>
+<h3 id="moving-a-block">Moving a block</h3>
+<p>To move a block:</p>
+<ol>
+<li>Click on the block you want to move and drag it to the new place.</li>
+</ol>
+<p>When just looking at the page it's not always obvious what is a block and what is not, but when you point at a block a black bar is shown:</p>
+<p><img src="../../Images/move-block-new.png" alt="Move block" /></p>
+<p>Note! Not all blocks can be moved. The layout can contain static blocks and they can not be moved.</p>
+<h3 id="deleting-a-block">Deleting a block</h3>
+<p>If you need to, you can delete a block this way:</p>
+<ol>
+<li>Point at the block.</li>
+<li>Click the x.</li>
+</ol>
+<p><img src="../../Images/delete-block-new2.png" alt="Delete block" /></p>
+<p>The following is shown:</p>
+<p><img src="../../Images/delete-block-2.png" alt="Delete block" /></p>
+<ol start="3">
+<li>Click &quot;OK&quot; if you're sure, &quot;Cancel&quot; if you're not.</li>
+</ol>
+<p>Note! Not all blocks can be deleted. The layout can contain static blocks and they can not be deleted.</p>
+<h2 id="save-undo-changes-and-publish">Save, Undo Changes and Publish</h2>
+<p>You don't need to save. When you make any change to the page layout is automatically saved and a new node in the Version History is created (see below).</p>
+<p>If you don't want save the changes you have made, you can undo these changes this way:</p>
+<ol>
+<li>Click &quot;Undo changes&quot;.</li>
+</ol>
+<p><img src="../../Images/undo-changes-new.png" alt="Undo changes" /></p>
+<p>Note! When you undo changes ALL changes that are made since the last published version are removed, regardless of who made them.</p>
+<p>When it's time to publish the layout changes:</p>
+<ol>
+<li>Click &quot;Publish&quot;.</li>
+</ol>
+<h2 id="version-history">Version History</h2>
+<p>When you do any change in the layout for a Quick Page, a Version History node is created. You can use the Version History to go back to any earlier version of the layout. You edit the content the normal way.</p>
+<ol>
+<li>Open Version History.</li>
+</ol>
+<p><img src="../../Images/open-version-history_new2.png" alt="Version History" /></p>
+<p>Published versions are noted with an integer, work in progress with a decimal.</p>
+<ol start="2">
+<li>Select the version you want to go back to, and select &quot;Restore&quot;.</li>
+</ol>
+<p><img src="../../Images/version-selected-restore-new.png" alt="Restore version" /></p>
+<p>The selected version becomes the latest draft and a new node is created in the Version History. You can now continue working with layout drafts and publish when you're ready.</p>
+<h2 id="editing-settings-for-a-control">Editing settings for a control</h2>
+<p>What you actually add with a block is a control. To edit the settings for the control:</p>
+<ol>
+<li>Point at the block so the black header is shown.</li>
+<li>Click the cogwheel.</li>
+</ol>
+<p><img src="../../Images/cogwheel-new.png" alt="Block settings " /></p>
+<p>The settings for the control is shown (if any), for example:</p>
+<p><img src="../../Images/control-settings.png" alt="Block settings " /></p>
+<p>All settings for controls are described in the Documentation, available here - in Omnia Admin.</p>

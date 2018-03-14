@@ -1,0 +1,74 @@
+﻿<h1 id="news-viewer">News Viewer</h1>
+<p>The news viewer control displays news articles from one or more News Centers, based on a configured filter.</p>
+<p><img src="../../Images/news-viewer.png" alt="News Viewer" /></p>
+<h2 id="news-viewer-settings">News Viewer Settings</h2>
+<p>To change the settings for the control, activate the Edit switch and then click the settings gear for the control.</p>
+<p>This will open the settings dialog. The news viewer settings are divided into three tabs:</p>
+<ul>
+<li><strong>Query Settings</strong>: Defines which news articles to get from a specific news center.</li>
+<li><strong>Display Settings</strong>: Defines how to render the news articles to the end user.</li>
+<li><strong>Custom colors</strong>: You should primarily set colors through Theme colors in Omnia Admin but If you still would like custom colors for the control, you can set them using this tab.</li>
+</ul>
+<p><img src="../../Images/news-viewer-quey.png" alt="News Viewer Settings - Query" /></p>
+<h3 id="the-query-tab">The Query tab</h3>
+<p>The <strong>News Center</strong> list displays all publishing sub sites in the site collection that have the &quot;Omnia News Center&quot; app feature activated.</p>
+<p>Select News Center(s) and set the settings this way:</p>
+<ol>
+<li>Select a News Center from the list. If you want news from more than one News Center displayed in this viewer, select the others the same way.(In the image below two News Centers are selected.)</li>
+<li>If not all news from the News Center should be displayed, you can set filters. Do do that, click the News Center. Filters are set indepently for each News Center.</li>
+</ol>
+<p><img src="../../Images/select-news-center-new.png" alt="Select News Center" /></p>
+<p>Available filters for that News Center are then shown. (What is available can differ depending on how the specific News Center is set up).</p>
+<p>If targeting is activated, you can now select to use it or not. If you do not select &quot;Use targeting&quot; all targeting settings made by the authors are ignored.</p>
+<ol start="3">
+<li>You can also add filters here, Click &quot;Add Filter&quot; to do that.</li>
+</ol>
+<p><img src="../../Images/select-news-center-add-filter.png" alt="Add Filter" /></p>
+<ol start="4">
+<li>Select type of filter in the first field. What is displayed after that depends on that choice. If more than one filter is added to the News Viewer, the news articles must match all filters, to be included in the result.</li>
+</ol>
+<p>Filters will limit the news articles shown to the end user based on certain criterias. The filters support Yes/No and Managed Metadata columns. Omnia will list all supported columns from the pages library where the news articles are located. It is possible to filter based on a fixed value or a user profile property.</p>
+<p>Some fields can be set to &quot;Fixed value&quot;. This is displayed as a check box. If checked, only news articles that is set to Yes will be shown. If unchecked, only news articles that is set to No will be shown. An example of this is the Top Story filter.</p>
+<p>Some fields can be set to &quot;Fixed Managed Metadata value&quot;. Only one value from the term set can then be selected. If the checkbox &quot;Include Child Terms&quot; is checked, any child terms to the value selected will also match the filter (for example: United Kingdom is selected, this will match news articles tagged with London, Manchester and Birmingham)</p>
+<p>A User &quot;Profile Property&quot; filter makes it possible to target news to a specific group of people based on their profile. When User Profile Property is selected, the value listbox will be populated with all available user profile properties in SharePoint. The News Viewer will do a string comparison between the values in the profile and the values set on the news articles. If &quot;Include Child Terms&quot; is checked, it will also include child terms to the terms the news article is tagged with. If &quot;Include Empty&quot; is selected, it will also include news articles that has not been tagged with this meta data property at all.</p>
+<p><strong>Note!</strong>
+Regardless of the filters you set here, a user can always read all news articles in the News Center.</p>
+<p>For the following fields the settings apply for all News Centers selected here:</p>
+<ul>
+<li><strong>Period</strong>: A list of predefined values that will decide for how long news articles will be shown in th viewer. It is based on the article date. Select &quot;No Limit&quot; if the query should ignore date.</li>
+<li><strong>Order By</strong>: It is possible to select whether to sort the list by title or article date. Default is article date descending.</li>
+<li><strong>Item Limit</strong>: The number of news articles to show in the result can be limited to a maximum number of items.</li>
+<li><strong>Priority</strong>: It is common that more than one News Viewer control is added to a page. Dependant on how the different News Viewer controls are configured, a news article may end up in the result in more than one control. The priority setting makes sure that this cannot happen. The priority decides which control that will show the news article in such a case. A lower number (for example 1) takes priority over a higher number (for example 2).</li>
+</ul>
+<h3 id="the-display-settings-tab">The Display Settings tab</h3>
+<p>On this tab the following settings are available:</p>
+<p><img src="../../Images/news-viewer-display.png" alt="News Viewer Settings - Display" /></p>
+<p><strong>View Template</strong>: The view template defines how the result should be rendered on the page. There are four options:</p>
+<p>&quot;News Roller&quot; view displays all articles matching the query in the same area 5 seconds at a time. The user can manually change which article that is displayed by holding the mouse over the container and click on the arrows. The image is using Image Rendition with ID 1001.</p>
+<p><img src="../../Images/news-roller-old-ux.png" alt="News Viewer News Roller" /></p>
+<p>&quot;News Listing with Image&quot; displays the news in a list, with a landscape image to the left.</p>
+<p><img src="../../Images/news-listing-image.old.png" alt="News Viewer New listing with image" /></p>
+<p>&quot;Top Story&quot; displays a big image with title on a transparent area. If one news article is displayed as Top Story, it will use the image with Landscape image rendition.</p>
+<p><img src="../../Images/newsviewertopstory1.png" alt="News Viewer News Top Story 1" /></p>
+<p>If two news articles are displayed, it will use the image with Square image rendition. If the news article does not have an image, more metadata about the news article will be shown and the background and text colors will use the <a href="/Docs/%5Blanguage%5D/Omnia%20Admin/default-colors/index.html">default colors</a>.</p>
+<p><img src="../../Images/newsviewertopstory2.png" alt="News Viewer News Top Story 2" /></p>
+<p>If three news articles are displayd, it will use the image with Portrait image rendition.</p>
+<p>A &quot;Simple List&quot; view displays the news articles without image in a simple list.</p>
+<p><img src="../../Images/news-viewer-simple-list.png" alt="News Viewer Simplet List" /></p>
+<p>The &quot;News Roller New UX&quot; view displays all articles matching the query in the same area 5 seconds at a time. The user can manually change which article to displayed by clicking the buttons. The image is using Image Rendition with ID 1001.</p>
+<p><img src="../../Images/news-roller.png" alt="News Viewer New UX" /></p>
+<p>&quot;News Listing with Image New UX&quot; displays the news in a list, with a square image to the left.</p>
+<p><img src="../../Images/news-listing-image.png" alt="News Viewer listing with image New UX" /></p>
+<ul>
+<li><strong>Display News Center link</strong>: Check if the link &quot;Go to News Center&quot; should be available at the end of the News Viewer.</li>
+<li><strong>News Center Label</strong>: Here you can change the label displayed for the News Center.</li>
+<li><strong>Display no result message</strong>: Check if a no result message should be shown if there are no news articles available in the list, for the loged in user.</li>
+</ul>
+<p>If a news article has not been read by the user (it is considered read when the user has browsed to the news article page), the title will be shown in bold.</p>
+<h3 id="the-custom-colors-tab">The Custom Colors tab</h3>
+<p>You should primarily set colors through Theme colors in Omnia Admin (System/Settings/Default colors). If you still would like custom colors for the control, you can set them using this tab.</p>
+<p><img src="../../Images/news-viewer-colors.png" alt="Custom colors" /></p>
+<h2 id="news-viewer-in-notification-panel">News Viewer in Notification Panel</h2>
+<p>The News Viewer control is available in the Notification Panel. If the News Viewer is added to the panel, a notification count icon will be shown if there are news articles in the result that are new to the user (the user has not seen them in the news list before)</p>
+<h2 id="news-viewer-web-partblock">News Viewer Web Part/block</h2>
+<p>The News Viewer control can also be added to a legacy page as a web part or as a block to a Quick Page.</p>
