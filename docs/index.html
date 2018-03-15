@@ -78,7 +78,7 @@
        
         //
         $('#div_content a').each(function(){
-          $(this).attr('data-documentation', $(pointer).attr("data-documentation"));
+          $(this).setAttribute('data-documentation', $(pointer).attr("data-documentation"));
         }
        
         $('#div_content').innerHTML= response;
