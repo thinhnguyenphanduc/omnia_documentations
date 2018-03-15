@@ -74,6 +74,12 @@
           url = url.replace("../",href + "OmniaIntranetDocument/Docs/en-us/");
           $(this).attr('src',url);        
         });
+       
+        //
+        $('#div_content a').each(function(){
+          $(this).attr('data-documentation', $(pointer).attr("data-documentation"));
+        }
+       
         $('#div_content').innerHTML= response;
       });    
     }
