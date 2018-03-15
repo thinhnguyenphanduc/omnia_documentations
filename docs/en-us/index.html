@@ -20,10 +20,12 @@
 </ul>
 <p>Links to descriptions of Omnia controls that is part of Omnia Foundation can be found in the navigation to the left.</p>
 
+<input type="button" id="btn" value="Go"  onclick="check();"/>
 <div id="div_content">
-  
 </div>
 
 <script>
-$('#div_content').load('index.html');
+  function check(){
+    $('#div_content').load('index.html');    
+  }
 </script>
