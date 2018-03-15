@@ -40,7 +40,7 @@
       });
      
       $('#div_content a').each(function(){
-        var url = $(this).attr('src');
+        var url = $(this).attr('href');
         if(url.indexOf("#") < 0){
          url = url.replace("/Docs/en-us/",href + "OmniaIntranetDocument/Docs/en-us/");
          $(this).attr('src',url);
