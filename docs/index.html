@@ -31,7 +31,7 @@
   }
   
   $("a").click(function () {
-    this.preventDefault();
+    event.preventDefault();
     var targetHref= $(this).attr("href");
     var href = $(location).attr('href');  
        
