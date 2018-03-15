@@ -38,6 +38,7 @@
  // });  
   
   $("a").on("click", function(e){
+    e.stopImmediatePropagation();
     console.log("inner a tag");
     handleHTML(e, this);
  });
