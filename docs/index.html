@@ -32,12 +32,17 @@
   
   function clickWithoutRedirect(){
     var targetHref = $(this).attr('href');
-     console.log("targetHref:" + targetHref);
+    console.log("targetHref:" + targetHref);
     event.preventDefault();
-    var href = $(location).attr('href');
-   
+    var href = $(location).attr('href');   
     console.log(href);
    
     $('#div_content').load(href + "OmniaIntranetDocument/" + targetHref);      
   }
+  
+  $("a").click(function () {
+        var anchorValue= $(this).attr("href");
+        alert(anchorValue);
+  });
+  
 </script>
