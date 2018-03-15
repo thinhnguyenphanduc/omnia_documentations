@@ -52,7 +52,7 @@
         var url = $(this).attr('src');
         // More than one ../
         while (url.indexOf("../../") > 0) {
-            console.log("url.indexOf("../../"): " + url.indexOf("../../"));
+            console.log("url.indexOf('../../'): " + url.indexOf("../../"));
             url = url.replace("../../","../");            
         }       
         console.log("url after remove double: " + url);
