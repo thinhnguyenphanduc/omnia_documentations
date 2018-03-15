@@ -54,7 +54,7 @@
       $('#div_content img').each(function(){
         var url = $(this).attr('src');
         // More than one ../
-        while (url.indexOf("../../") < 0) {
+        while (url.indexOf("../../") > 0) {
             url = url.replace("../../","../");            
         }       
         // Append complete url
