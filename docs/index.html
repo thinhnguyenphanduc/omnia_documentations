@@ -26,10 +26,7 @@
 </div>
 
 <script>
-  /*Function will catch the url changing*/
-  $(function(){
-
-  });
+ 
 
   /*Click on navigation bar*/
  // $("a").click(function (e) {
@@ -37,7 +34,7 @@
   //  handleHTML(e, this);
  // });  
   
-  $(document).on("click", function(e){
+  $("a").on("click", function(e){
     console.log("inner a tag");
     handleHTML(e, this);
  });
