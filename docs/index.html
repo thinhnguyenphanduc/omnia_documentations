@@ -32,13 +32,13 @@
 
   /*Click on navigation bar*/
   $("a").click(function (e) {
-    handleHTML(e);
+    handleHTML(e, this);
   });  
   
   
-  function handleHTML(e){
+  function handleHTML(e, pointer){
     e.preventDefault();
-    var targetHref= $(this).attr("href");
+    var targetHref= $(pointer).attr("href");
     var href = $(location).attr('href');  
        
     $('#div_content').load(href + "OmniaIntranetDocument" + targetHref, function(response, status) {
