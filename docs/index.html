@@ -32,16 +32,16 @@
   });
 
   /*Click on navigation bar*/
-  $("a").click(function (e) {
-    console.log("a tag");
-    handleHTML(e, this);
-  });  
+ // $("a").click(function (e) {
+  //  console.log("a tag");
+  //  handleHTML(e, this);
+ // });  
   
-   $("#div_content a").click(function (e) {
+  $("a").on("click", function(e){
     console.log("inner a tag");
     handleHTML(e, this);
-  });  
-  
+ });
+   
   function handleHTML(e, pointer){
     e.preventDefault();
     var targetHref= $(pointer).attr("href");
