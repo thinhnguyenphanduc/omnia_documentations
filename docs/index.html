@@ -46,13 +46,10 @@
     var targetHref= $(pointer).attr("href");
     var href = $(location).attr('href');  
     // Clear id-based element movement    
-    if(href.indexOf("/#") > 0){
-      console.log(href.indexOf("/#"));
-      href = href.slice(0, href.indexOf("/#"));
-      document.location.href = href;
+    if(href.indexOf("/#") > 0){      
+      href = href.slice(0, href.indexOf("/#"));      
     }
-    console.log("after clear: " + href);
-       
+           
     // Load html to div tag   
     if(targetHref.indexOf("#") < 0 && targetHref.indexOf("http") != 0 ) // In case, there is # or external url
     {
