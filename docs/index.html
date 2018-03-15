@@ -41,7 +41,7 @@
       console.log(response);
       console.log(status);
       
-      response = response.replace("<img src=\"../Images",href + "OmniaIntranetDocument/Images");
+      response = response.replace(/<img src=\"..\/Images/g,href + "OmniaIntranetDocument/Images");
       $('#div_content').innerHTML= response;
     });    
   });
