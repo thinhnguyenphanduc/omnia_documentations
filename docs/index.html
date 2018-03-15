@@ -39,8 +39,16 @@
       $('#div_content img').each(function(){
         var url = $(this).attr('src');
         url = url.replace("../",href + "OmniaIntranetDocument/Docs/en-us/");
-        $(this).attr('src',url);
-        console.log("url: " + url);
+        $(this).attr('src',url);        
+      });
+     
+      $('#div_content a').each(function(){
+        var url = $(this).attr('src');
+        if(url.indexOf("#") < 0){
+         url = url.replace("/Docs/en-us/",href + "OmniaIntranetDocument/Docs/en-us/");
+         $(this).attr('src',url);
+         console.log("url: " + url);
+        }        
       });
     });    
   });
