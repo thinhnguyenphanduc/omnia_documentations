@@ -28,9 +28,15 @@
   $(function(){
 
   });
+
   /*Click on navigation bar*/
-  $("a").click(function () {
-    event.preventDefault();
+  $("a").click(function (e) {
+    handleHTML(e);
+  });  
+  
+  
+  function handleHTML(e){
+    e.preventDefault();
     var targetHref= $(this).attr("href");
     var href = $(location).attr('href');  
        
@@ -42,21 +48,7 @@
         url = url.replace("../",href + "OmniaIntranetDocument/Docs/en-us/");
         $(this).attr('src',url);        
       });
-      // Change href of a tags
-      $('#div_content a').each(function(){
-        var url = $(this).attr('href');
-        // This element has href attribute
-        if(url != undefined){
-          console.log("url: " + url);
-          if(url.indexOf("#") < 0){
-           url = url.replace("/Docs/en-us/",href + "OmniaIntranetDocument/Docs/en-us/");
-           $(this).attr('href',url);         
-          }        
-        }
-        
-      });
       $('#div_content').innerHTML= response;
     });    
-  });  
-  
+  };
 </script>
