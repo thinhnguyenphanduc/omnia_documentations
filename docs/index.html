@@ -32,13 +32,11 @@
   //  console.log("a tag");
   //  handleHTML(e, this);
  // });  
-  $("a").on("click", function(e){
-      console.log("inner a tag");
+  $("a").on("click", function(e){      
       handleHTML(e, this);
   });
   
-  $("#div_content").on("click", "a", function(e){
-      console.log("inner a tag");
+  $("#div_content").on("click", "a", function(e){      
       handleHTML(e, this);
   });
   
