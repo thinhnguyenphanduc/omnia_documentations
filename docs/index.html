@@ -44,9 +44,12 @@
     var targetHref= $(pointer).attr("href");
     var href = $(location).attr('href');  
     // Load html to div tag
-    if(targetHref.indexOf("#") < 0 && targetHref.indexOf("http") != 0 )
+    var modifiedUrl = targetHref;
+    if(targetHref.indexOf("#") < 0 && targetHref.indexOf("http") != 0 ) // In case, there is # or external url
     {
-      $('#div_content').load(href + "OmniaIntranetDocument" + targetHref, function(response, status) {
+      modifiedUrl = href + "OmniaIntranetDocument" + targetHref; 
+    }
+    $('#div_content').load(modifiedUrl, function(response, status) {
         // Change src of img tags
         $('#div_content img').each(function(){
           var url = $(this).attr('src');
@@ -60,6 +63,6 @@
         });
         $('#div_content').innerHTML= response;
       });    
-    }
+      
   };
 </script>
