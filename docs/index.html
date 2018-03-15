@@ -39,11 +39,13 @@
     var href = $(location).attr('href');  
        
     $('#div_content').load(href + "OmniaIntranetDocument" + targetHref, function(response, status) {
-      console.log(response);
-      console.log(status);
-      
-      response = response.replace(/<img src=\"..\/Images/g,href + "OmniaIntranetDocument/Images");
       $('#div_content').innerHTML= response;
+      $('#div_content img').each(function(){
+        var url = $(this).attr('src');
+        url = url.replace("../",href + "OmniaIntranetDocument/");
+        $(this).attr('src',url);
+        console.log("url: " + url);
+      });
     });    
   });
   
