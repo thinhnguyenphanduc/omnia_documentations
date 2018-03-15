@@ -40,10 +40,11 @@
      
       $('#div_content a').each(function(){
         var url = $(this).attr('href');
+        console.log("url: " + url);
         if(url.indexOf("#") < 0){
          url = url.replace("/Docs/en-us/",href + "OmniaIntranetDocument/Docs/en-us/");
          $(this).attr('href',url);
-         console.log("url: " + url);
+         
         }        
       });
     });    
