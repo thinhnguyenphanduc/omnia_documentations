@@ -44,8 +44,9 @@
     var targetHref= $(pointer).attr("href");
     var href = $(location).attr('href');  
     // Clear id-based element movement    
-    if(href.indexOf("/#") > 0){      
-      href = href.slice(0, href.indexOf("/#"));      
+    var endPos = href.indexOf("/#");
+    if(endPos > 0){      
+      href = href.slice(0, (endPos + 1));      
     }
            
     // Load html to div tag   
