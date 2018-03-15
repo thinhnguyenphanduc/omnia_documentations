@@ -46,6 +46,7 @@
     var href = $(location).attr('href');  
     // Load html to div tag
     var modifiedUrl = targetHref;
+    console.log("modifiedUrl: " + modifiedUrl);
     if(targetHref.indexOf("#") < 0 && targetHref.indexOf("http") != 0 ) // In case, there is # or external url
     {
       modifiedUrl = href + "OmniaIntranetDocument" + targetHref; 
