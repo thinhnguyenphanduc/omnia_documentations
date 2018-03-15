@@ -11,7 +11,7 @@
 <li><a href="/Docs/en-us/introduction-to-feeds-and-notifications/index.html">Introduction to Feeds and Notifications</a></li>
 <li><a href="/Docs/en-us/introduction-to-news-center/index.html">Introduction to News</a></li>
 <li><a href="/Docs/en-us/introduction-to-team-sites/index.html">Introduction to Team Sites</a></li>
-<li><a href="/Docs/en-us/introduction-to-content-management/index.html">Introduction to Content Management</a></li>
+<li><a href="/Docs/en-us/introduction-to-content-management/index.html" data-documentation="OmniaIntranetDocument">Introduction to Content Management</a></li>
 </ul>
 <p>When working with Common links, Important announcements, Reusable banners, Quick Polls and settings for Content Management, the information you need is found here:</p>
 <ul>
@@ -50,7 +50,7 @@
     if(endPos > 0){      
       href = href.slice(0, (endPos + 1));      
     }
-           
+    console.log("data: " + $(pointer).attr("data-documentation"));
     // Load html to div tag   
     if(targetHref.indexOf("#") < 0 && targetHref.indexOf("http") != 0 ) // In case, there is # or external url
     {
