@@ -37,27 +37,29 @@
   $("#div_content").on("click", "a", function(e){      
       handleHTML(e, this);
   });
-  
-  
-   
+    
+  // Handle loading html to div tag 
   function handleHTML(e, pointer){
     e.preventDefault();
     var targetHref= $(pointer).attr("href");
     var href = $(location).attr('href');  
-       
-    $('#div_content').load(href + "OmniaIntranetDocument" + targetHref, function(response, status) {
-      // Change src of img tags
-      $('#div_content img').each(function(){
-        var url = $(this).attr('src');
-        // More than one ../
-        while (url.indexOf("../../") >= 0) {            
-            url = url.replace("../../","../");            
-        }               
-        // Append complete url
-        url = url.replace("../",href + "OmniaIntranetDocument/Docs/en-us/");
-        $(this).attr('src',url);        
-      });
-      $('#div_content').innerHTML= response;
-    });    
+    // Load html to div tag
+    if(targetHref.indexOf("#") < 0 || targetHref.indexOf("http") != 0 )
+    {
+      $('#div_content').load(href + "OmniaIntranetDocument" + targetHref, function(response, status) {
+        // Change src of img tags
+        $('#div_content img').each(function(){
+          var url = $(this).attr('src');
+          // More than one ../
+          while (url.indexOf("../../") >= 0) {            
+              url = url.replace("../../","../");            
+          }               
+          // Append complete url
+          url = url.replace("../",href + "OmniaIntranetDocument/Docs/en-us/");
+          $(this).attr('src',url);        
+        });
+        $('#div_content').innerHTML= response;
+      });    
+    }
   };
 </script>
