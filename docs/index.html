@@ -38,7 +38,7 @@
       $('#div_content').innerHTML= response;
       $('#div_content img').each(function(){
         var url = $(this).attr('src');
-        url = url.replace("../",href + "OmniaIntranetDocument/");
+        url = url.replace("../",href + "OmniaIntranetDocument/Docs/en-us/");
         $(this).attr('src',url);
         console.log("url: " + url);
       });
