@@ -37,7 +37,7 @@
       handleHTML(e, this);
   });
   
-  $("#div_content a").on("click", function(e){
+  $("#div_content").on("click", "a", function(e){
       console.log("inner a tag");
       handleHTML(e, this);
   });
