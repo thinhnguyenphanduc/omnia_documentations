@@ -1,6 +1,11 @@
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
    
-                           
+<span>Language: </span>
+<select id="language">
+  <option value="en-us">en-US</option>
+  <option value="sv-se">sv-SE</option> 
+</select>
+
 <h1 id="omnia-intranet">Omnia Intranet</h1>
 <p><a href="http://www.omniaintranet.se" target="_blank">Omnia Intranet</a> is a product from <a href="http://www.preciofishbone.se" target="_blank">Precio Fishbone</a>.</p>
 <p>The information here is intended for power users and administrators. If you are new to Omnia we recommend that you start by reading the introductions.</p>
@@ -48,7 +53,10 @@
     if(endPos > 0){      
       href = href.slice(0, (endPos + 1));      
     }
+     
     console.log("data: " + $(pointer).attr("data-documentation"));
+    console.log("language: " + $('#language').val());
+     
     // Load html to div tag   
     if(targetHref.indexOf("#") < 0 && targetHref.indexOf("http") != 0 ) // In case, there is # or external url
     {
