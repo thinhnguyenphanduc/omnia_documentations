@@ -31,11 +31,12 @@
   
   function clickWithoutRedirect(){
     var targetHref = $(this).attr('href');
+     console.log("targetHref:" + targetHref);
     event.preventDefault();
     var href = $(location).attr('href');
    
     console.log(href);
-    console.log(targetHref);
+   
     $('#div_content').load(href + "OmniaIntranetDocument/" + targetHref);      
   }
 </script>
