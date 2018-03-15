@@ -35,10 +35,10 @@
     var targetHref= $(this).attr("href");
     var href = $(location).attr('href');  
        
-    $('#div_content').load(href + "OmniaIntranetDocument" + targetHref, function(response, status, xhr) {
+    $('#div_content').load(href + "OmniaIntranetDocument" + targetHref, function(response, status) {
       console.log(response);
       console.log(status);
-      console.log(xhr);
+      response = response.replace("src='..",href + "OmniaIntranetDocument");
     });    
   });
   
