@@ -47,6 +47,7 @@
     if(href.indexOf("/#") > 0){
       console.log(href.indexOf("/#"));
       href.slice((href.indexOf("/#") - 1));
+      $(location).attr('href', href); 
     }
     console.log("after clear: " + href);
        
