@@ -69,7 +69,7 @@
                         </nav>
                     </div><!--//doc-sidebar-->
                     <div class="doc-content"><!--//doc-content-->
-                        <div class="content-inner" style="overflow-y: ">
+                        <div class="content-inner" id="div_content" style="overflow-y: ">
                             <section id="download-section" class="doc-section">
                                 <h2 class="section-title">Download</h2>
 							<div class="section-block">
@@ -157,8 +157,8 @@
         var documents = [
             {
                 name: "Omnia Intranet",
-                slug: "omnia-intranet",
-                href: "/a",
+                slug: "OmniaIntranetDocument",
+                href: "/Docs/en-us/introduction-to-content-management/index.html",
                 subTitle: [
                     {
                         name: "Introduction to Navigation and Search",
@@ -219,13 +219,13 @@
                     docMenuNode += "<li class='active'> <a href='" + doc.href + "' data-slug='" + doc.slug + "'>" + doc.name + "</a>";
                     isActive = false;
                 } else {
-                    docMenuNode += "<li> <a href='" + doc.href + "' data-slug='" + doc.slug + "'>" + doc.name + "</a>";
+                    docMenuNode += "<li> <a href='" + doc.href + "' data-documentation='" + doc.slug + "'>" + doc.name + "</a>";
                 }
                 
                 if (doc.subTitle.length > 0) {
                     docMenuNode += "<ul class='nav doc-sub-menu'>";
                     doc.subTitle.forEach(function (subDoc) {
-                        docMenuNode += "<li> <a href='" + subDoc.href + "' data-slug='" + subDoc.slug + "'>" + subDoc.name + "</a></li>";
+                        docMenuNode += "<li> <a href='" + subDoc.href + "' data-documentation='" + subDoc.slug + "'>" + subDoc.name + "</a></li>";
                     });
                     docMenuNode += "</ul>";
                 } 
@@ -242,6 +242,60 @@
     })();
   
 
+	
+/*Click on navigation bar*/
+ // $("a").click(function (e) {
+  //  console.log("a tag");
+  //  handleHTML(e, this);
+ // });  
+  $("a").on("click", function(e){      
+      handleHTML(e, this);
+  });
+  
+  $("#div_content").on("click", "a", function(e){      
+      handleHTML(e, this);
+  });
+    
+  // Handle loading html to div tag 
+  function handleHTML(e, pointer){    
+    var targetHref= $(pointer).attr("href");
+    var href = $(location).attr('href');  
+    // Clear id-based element movement    
+    var endPos = href.indexOf("/#");
+    if(endPos > 0){      
+      href = href.slice(0, (endPos + 1));      
+    }
+     
+    console.log("data: " + $(pointer).attr("data-documentation"));
+    console.log("language: " + $('#language').val());
+     
+    // Load html to div tag   
+    if(targetHref.indexOf("#") < 0 && targetHref.indexOf("http") != 0 ) // In case, there is # or external url
+    {
+      e.preventDefault();
+      $('#div_content').load(href + "OmniaIntranetDocument" + targetHref, function(response, status) {
+        // Change src of img tags
+        $('#div_content img').each(function(){
+          var url = $(this).attr('src');
+          // More than one ../
+          while (url.indexOf("../../") >= 0) {            
+              url = url.replace("../../","../");            
+          }               
+          // Append complete url
+          url = url.replace("../",href + "OmniaIntranetDocument/Docs/" + $('#language').val() + "/");
+          $(this).attr('src',url);        
+        });    
+        $('#div_content').html(response);
+       
+        // Set data-documentation to every a tag
+        $('#div_content a').each(function(){
+          $(this).attr('data-documentation', $(pointer).attr("data-documentation"));
+        });
+      });    
+    }
+    
+      
+  };
 </script>
 </body>
 </html> 
