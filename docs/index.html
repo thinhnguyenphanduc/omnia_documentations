@@ -24,36 +24,36 @@
 </div>
 
 <script>
-  /**/
+  /*Function will catch the url changing*/
   $(function(){
     // Bind the event.
     $(window).hashchange(hashchanged);
     return false;    
   });
-  /**/
+  /*Click on navigation bar*/
   $("a").click(function () {
     event.preventDefault();
     var targetHref= $(this).attr("href");
     var href = $(location).attr('href');  
        
     $('#div_content').load(href + "OmniaIntranetDocument" + targetHref, function(response, status) {
-      $('#div_content').innerHTML= response;
-      // Img
+      
+      // Change src of img tags
       $('#div_content img').each(function(){
         var url = $(this).attr('src');
         url = url.replace("../",href + "OmniaIntranetDocument/Docs/en-us/");
         $(this).attr('src',url);        
       });
-      // a
+      // Change href of a tags
       $('#div_content a').each(function(){
         var url = $(this).attr('href');
         console.log("url: " + url);
         if(url.indexOf("#") < 0){
          url = url.replace("/Docs/en-us/",href + "OmniaIntranetDocument/Docs/en-us/");
-         $(this).attr('href',url);
-         
+         $(this).attr('href',url);         
         }        
       });
+      $('#div_content').innerHTML= response;
     });    
   });  
   
