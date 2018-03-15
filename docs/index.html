@@ -44,13 +44,12 @@
   function handleHTML(e, pointer){    
     var targetHref= $(pointer).attr("href");
     var href = $(location).attr('href');  
-    // Clear id-based element movement
-    console.log("before clear: " + href);
+    // Clear id-based element movement    
     if(href.indexOf("/#") > 0){
       console.log(href.indexOf("/#"));
-      href.slice(href.indexOf("/#"));
+      href.slice(href.indexOf("/#") - 1);
     }
-    console.log("before clear: " + href);
+    console.log("after clear: " + href);
        
     // Load html to div tag   
     if(targetHref.indexOf("#") < 0 && targetHref.indexOf("http") != 0 ) // In case, there is # or external url
