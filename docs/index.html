@@ -24,7 +24,13 @@
 </div>
 
 <script>
-  
+  /**/
+  $(function(){
+    // Bind the event.
+    $(window).hashchange(hashchanged);
+    return false;    
+  });
+  /**/
   $("a").click(function () {
     event.preventDefault();
     var targetHref= $(this).attr("href");
@@ -32,12 +38,13 @@
        
     $('#div_content').load(href + "OmniaIntranetDocument" + targetHref, function(response, status) {
       $('#div_content').innerHTML= response;
+      // Img
       $('#div_content img').each(function(){
         var url = $(this).attr('src');
         url = url.replace("../",href + "OmniaIntranetDocument/Docs/en-us/");
         $(this).attr('src',url);        
       });
-     
+      // a
       $('#div_content a').each(function(){
         var url = $(this).attr('href');
         console.log("url: " + url);
