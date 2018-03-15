@@ -38,9 +38,8 @@
     $('#div_content').load(href + "OmniaIntranetDocument" + targetHref, function(response, status) {
       console.log(response);
       console.log(status);
-      var res = "";
-      res = response;
-      res = res.replaceAll("<img src=\"../Images",href + "OmniaIntranetDocument/Images");
+      
+      response = response.replaceAll(/"<img src=\"../Images"/g,href + "OmniaIntranetDocument/Images");
       $('#div_content').innerHTML= response;
     });    
   });
