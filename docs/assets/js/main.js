@@ -23,5 +23,10 @@ $(document).ready(function() {
 
         // Load default content       
         getHTML($(location).attr('href'), menu[0].href, menu[0].slug); 
+        
+        // Search event
+        $('#documentations').on('change', 'input',function(e){
+            alert('Changed!')
+        });
     });
 });
