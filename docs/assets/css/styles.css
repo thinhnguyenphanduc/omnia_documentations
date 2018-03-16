@@ -1161,8 +1161,3 @@ select {
 #div_content img {
 	max-width: 100% !important;
 }
-
-.doc-sidebar {
-	postion: fixed !important;
-}
-
