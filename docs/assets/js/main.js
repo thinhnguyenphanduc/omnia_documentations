@@ -1,6 +1,6 @@
 $(document).ready(function() {  
     $(window).on('load resize', function() {
-        $(window).trigger('scroll'); 
+        $(window).trigger('scroll');   
     }); 
    
     /* Activate scrollspy menu */ 
