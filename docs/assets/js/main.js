@@ -27,7 +27,3 @@ $(document).ready(function() {
     // Get default content   
     
 });
-
-/*(function(){
-   
-})();*/
