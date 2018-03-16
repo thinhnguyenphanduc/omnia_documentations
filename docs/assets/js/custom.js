@@ -24,9 +24,9 @@
     return docMenuNode;
 };
 
-// Get html from url
-function getHTML(href, targetHref) {
-    $("#div_content").load(href + $(pointer).attr("data-documentation") + targetHref,
+// Get html from url 
+function getHTML(href, targetHref, data_documentation) {
+    $("#div_content").load(href + data_documentation + targetHref,
          function (response, status) {
              console.log("loadDivContent");
              // Change src of img tags
@@ -39,7 +39,7 @@ function getHTML(href, targetHref) {
 
                  // Append complete url
                  url = href +
-                     $(pointer).attr("data-documentation") +
+                     data_documentation +
                      "/Docs/" +
                      $('#language').val() +
                      "/" +
@@ -50,7 +50,7 @@ function getHTML(href, targetHref) {
 
              // Set data-documentation to every a tag
              $('#div_content a').each(function () {
-                 $(this).attr('data-documentation', $(pointer).attr("data-documentation"));
+                 $(this).attr('data-documentation', data_documentation);
              });
          });
  }
@@ -64,7 +64,7 @@ function handleHTML(e, pointer) {
     if (endPos > 0) {
         href = href.slice(0, (endPos + 1));
     }
-
+    var data_documentation = $(pointer).attr("data-documentation");
     console.log(`data: ${$(pointer).attr("data-documentation")}`);
     console.log(`language: ${$('#language').val()}`);
 
@@ -72,7 +72,7 @@ function handleHTML(e, pointer) {
     if (targetHref.indexOf("#") < 0 && targetHref.indexOf("http") != 0) // In case, there is # or external url
     {
         e.preventDefault();
-        getHTML(href, targetHref);
+        getHTML(href, targetHref, data_documentation);
     }
 }
 
