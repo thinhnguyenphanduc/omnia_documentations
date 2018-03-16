@@ -196,8 +196,8 @@
             },
             {
                 name: "Omnia Foundation",
-                slug: "omnia-foundation",
-                href: "",
+                slug: "Omnia.Foundation.Documentation",
+                href: "/Docs/en-us/index.html",
                 subTitle: [
                     {
                         name: "Introduction Foundation Admin",
@@ -273,8 +273,7 @@
       href = href.slice(0, (endPos + 1));      
     }
      
-    console.log("data: " + $(pointer).attr("data-documentation"));
-	    console.log("data documentation: " + $(pointer).data("documentation"));
+    console.log("data: " + $(pointer).attr("data-documentation"));	    
     console.log("language: " + $('#language').val());
      
     // Load html to div tag   
@@ -282,7 +281,7 @@
     {
       e.preventDefault();
 	    console.log("preventDefault");
-      $('#div_content').load(href + "OmniaIntranetDocument" + targetHref, function(response, status) {
+      $('#div_content').load(href + $(pointer).attr("data-documentation") + targetHref, function(response, status) {
 	      console.log("loadDivContent");
         // Change src of img tags
         $('#div_content img').each(function(){
@@ -292,7 +291,7 @@
               url = url.replace("../../","../");            
           }               
           // Append complete url
-          url = url.replace("../",href + "OmniaIntranetDocument/Docs/" + $('#language').val() + "/");
+          url = url.replace("../",href + $(pointer).attr("data-documentation") + "/Docs/" + $('#language').val() + "/");
           $(this).attr('src',url);        
         });    
         $('#div_content').innerHTML= response;
