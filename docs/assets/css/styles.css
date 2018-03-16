@@ -1161,3 +1161,7 @@ select {
 	max-width: 100% !important;
 }
 
+#doc-nav {
+	postion: fixed;
+}
+
