@@ -13,11 +13,7 @@ $(document).ready(function() {
     });
  
     // Get default content   
-    
-});
-
-(function(){
-    /*Click on navigation bar*/
+     /*Click on navigation bar*/
     $("a").on("click", function (e) {
         alert("Click on navigation bar");
         handleHTML(e, this);
@@ -28,4 +24,8 @@ $(document).ready(function() {
         alert("Click on navigation bar #div_content");
         handleHTML(e, this);
     });
+});
+
+(function(){
+   
 })();
