@@ -24,6 +24,37 @@
     return docMenuNode;
 };
 
+// Get html from url
+function getHTML(id, targetHref) {
+     $(id).load(href + $(pointer).attr("data-documentation") + targetHref,
+         function (response, status) {
+             console.log("loadDivContent");
+             // Change src of img tags
+             $('#div_content img').each(function () {
+                 var url = $(this).attr('src');
+                 // More than one ../
+                 while (url.indexOf("../") >= 0) {
+                     url = url.replace("../", "");
+                 }
+
+                 // Append complete url
+                 url = href +
+                     $(pointer).attr("data-documentation") +
+                     "/Docs/" +
+                     $('#language').val() +
+                     "/" +
+                     url;
+                 $(this).attr('src', url);
+             });
+             $(id).innerHTML = response;
+
+             // Set data-documentation to every a tag
+             $('#div_content a').each(function () {
+                 $(this).attr('data-documentation', $(pointer).attr("data-documentation"));
+             });
+         });
+ }
+
 // Handle loading html to div tag
 function handleHTML(e, pointer) {
     const targetHref = $(pointer).attr("href");
@@ -41,33 +72,8 @@ function handleHTML(e, pointer) {
     if (targetHref.indexOf("#") < 0 && targetHref.indexOf("http") != 0) // In case, there is # or external url
     {
         e.preventDefault();
-        console.log("preventDefault");
-        $('#div_content').load(href + $(pointer).attr("data-documentation") + targetHref,
-            function (response, status) {
-                console.log("loadDivContent");
-                // Change src of img tags
-                $('#div_content img').each(function () {
-                    var url = $(this).attr('src');
-                    // More than one ../
-                    while (url.indexOf("../") >= 0) {
-                        url = url.replace("../", "");
-                    }
-
-                    // Append complete url
-                    url = href +
-                        $(pointer).attr("data-documentation") +
-                        "/Docs/" +
-                        $('#language').val() +
-                        "/" +
-                        url;
-                    $(this).attr('src', url);
-                });
-                $('#div_content').innerHTML = response;
-
-                // Set data-documentation to every a tag
-                $('#div_content a').each(function () {
-                    $(this).attr('data-documentation', $(pointer).attr("data-documentation"));
-                });
-            });
+        getHTML("#div_content", targetHref);
     }
 }
+
+

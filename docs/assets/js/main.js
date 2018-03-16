@@ -11,17 +11,17 @@ $(document).ready(function() {
         const docMenu = createDocMenu(menu);
         $("#doc-menu").html(docMenu);
         
-        /*Click on navigation bar*/
+        // Click on navigation bar
         $("a").on("click", function (e) {
             handleHTML(e, this);
         });
 
-        /*Clicl on links in Div_Content*/ 
+        // Click on links in Div_Content
         $("#div_content").on("click","a", function (e) {
             handleHTML(e, this);
         });
+
+        // Load default content
+        getHTML("#div_content", "/Docs/en-us/index.html");
     });
- 
-    // Get default content   
-    
 });
