@@ -37,12 +37,11 @@ $(document).ready(function() {
                 }
             },
             list: {
-                onSelectItemEvent: function() {
+                onClickEvent: function() {
 		    var name = $("#documentations").getSelectedItemData().name;
                     var href = $("#documentations").getSelectedItemData().href;
-                    var slug = $("#documentations").getSelectedItemData().slug;			        
-                    console.log(href);
-                    console.log(slug);
+                    var slug = $("#documentations").getSelectedItemData().slug;		        
+                    
                     getHTML($(location).attr('href'), href, slug);                     
                 }	
             }
