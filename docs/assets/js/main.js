@@ -27,6 +27,6 @@ $(document).ready(function() {
         // Search event
         $('#documentations').on('change', 'input',function(e){
             alert('Changed!')
-        });
+        }); 
     });
 });
