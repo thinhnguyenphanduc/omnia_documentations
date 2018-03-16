@@ -1,8 +1,8 @@
 $(document).ready(function() {  
-    $(window).on('load resize', function() {  
+    $(window).on('load resize', function() {
         $(window).trigger('scroll');   
     }); 
-       
+   
     /* Activate scrollspy menu */ 
     $('body').scrollspy({ target: '#doc-nav', offset: 100 });
 
@@ -13,7 +13,7 @@ $(document).ready(function() {
         
         // Click on navigation bar
         $("a").on("click", function (e) {
-            handleHTML(e, this); 
+            handleHTML(e, this);
         });
 
         // Click on links in Div_Content
@@ -22,6 +22,6 @@ $(document).ready(function() {
         });
 
         // Load default content
-        getHTML($(location).attr('href'), "/Docs/en-us/index.html");
+        getHTML($(location).attr('href'), "/Docs/en-us/index.html", "Omnia.Intranet.Document");
     });
 });
