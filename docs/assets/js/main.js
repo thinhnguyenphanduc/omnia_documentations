@@ -38,9 +38,10 @@ $(document).ready(function() {
             },
             list: {
                 onSelectItemEvent: function() {
+		    var name = $("#function-data").getSelectedItemData().name;
                     var href = $("#function-data").getSelectedItemData().href;
                     var slug = $("#function-data").getSelectedItemData().slug;
-			        $("#data-holder").val(value).trigger("change");
+			        $("#data-holder").val(name).trigger("change");
                     console.log(href);
                     console.log(slug);
                     getHTML($(location).attr('href'), href, slug);                     
