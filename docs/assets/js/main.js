@@ -26,7 +26,22 @@ $(document).ready(function() {
         
         // Search event
         $('#documentations').on('input',function (e) {
-            alert('Changed!')
+            
+            var options = {
+            data: menu,
+
+            getValue: "name",
+
+            template: {
+                type: "description",
+                fields: {
+                    description: "slug"
+                }
+            }
+        };
+
+        $("#documentations").easyAutocomplete(options);
+            
         }); 
     });
 });
