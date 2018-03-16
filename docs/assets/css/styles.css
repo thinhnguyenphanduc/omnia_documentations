@@ -865,7 +865,7 @@ select {
   background: #fff;
   margin-bottom: 30px;
   position: relative;
-  text-align: center;
+  text-align: center; 
 }
 .promo-block .figure-holder-inner img {
   border: 5px solid #fff;
