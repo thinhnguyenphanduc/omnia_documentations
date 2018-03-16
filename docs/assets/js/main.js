@@ -25,3 +25,4 @@ $(document).ready(function() {
         getHTML($(location).attr('href'), "/Docs/en-us/index.html", "Omnia.Intranet.Document");
     });
 });
+ 
