@@ -38,10 +38,9 @@ $(document).ready(function() {
             },
             list: {
                 onSelectItemEvent: function() {
-		    var name = $("#function-data").getSelectedItemData().name;
-                    var href = $("#function-data").getSelectedItemData().href;
-                    var slug = $("#function-data").getSelectedItemData().slug;
-			        $("#data-holder").val(name).trigger("change");
+		    var name = $("#documentations").getSelectedItemData().name;
+                    var href = $("#documentations").getSelectedItemData().href;
+                    var slug = $("#documentations").getSelectedItemData().slug;			        
                     console.log(href);
                     console.log(slug);
                     getHTML($(location).attr('href'), href, slug);                     
