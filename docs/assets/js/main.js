@@ -3,7 +3,7 @@ $(document).ready(function() {
         $(window).trigger('scroll'); 
     });
   
-    /* Activate scrollspy menu */
+    /* Activate scrollspy menu */ 
     $('body').scrollspy({ target: '#doc-nav', offset: 100 });
 
     // Create navigation menu 
