@@ -27,8 +27,7 @@
 // Get html from url 
 function getHTML(href, targetHref, data_documentation) {
     $("#div_content").load(href + data_documentation + targetHref,
-         function (response, status) {
-             console.log("loadDivContent");
+         function (response, status) {             
              // Change src of img tags
              $('#div_content img').each(function () {
                  var url = $(this).attr('src');
@@ -64,10 +63,7 @@ function handleHTML(e, pointer) {
     if (endPos > 0) {
         href = href.slice(0, (endPos + 1));
     }
-    var data_documentation = $(pointer).attr("data-documentation");
-    console.log(`data: ${$(pointer).attr("data-documentation")}`);
-    console.log(`language: ${$('#language').val()}`);
-
+    var data_documentation = $(pointer).attr("data-documentation");    
     // Load html to div tag
     if (targetHref.indexOf("#") < 0 && targetHref.indexOf("http") != 0) // In case, there is # or external url
     {
