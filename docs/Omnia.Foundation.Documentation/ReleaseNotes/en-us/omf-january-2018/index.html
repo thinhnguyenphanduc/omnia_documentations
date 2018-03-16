@@ -1,0 +1,43 @@
+﻿<h1 id="omnia-foundation-january-2018">Omnia Foundation - January 2018</h1>
+<h2 id="new-features">New Features</h2>
+<p><strong>Omnia Profiles</strong></p>
+<p>A new feature in Omnia makes it possible to split a tenant into different profiles.
+Profiles can be used to create different publishing portals for different needs, for example
+Intranet and Extranet or profiles for different companies sharing the same tenant.</p>
+<p><img src="../Images/omf-january-2018/OmniaProfiles.png" alt="Omnia Profiles" /></p>
+<p><strong>Improved Tutorial</strong></p>
+<p>The administrative UI for tutorials has been updated to make it easier to create tutorials.</p>
+<p><img src="../Images/omf-january-2018/TutorialAdministration.png" alt="Tutorial Administration" /></p>
+<p>It is also possible to create a new type of tutorial type, a wizard. A wizard tutorial can be used to
+give an introduction to a specific part of the solution without connecting it to certain parts
+of the page. The wizard will show up in the middle of the page.</p>
+<p><img src="../Images/omf-january-2018/WizardTutorial.png" alt="Wizard Tutorial" /></p>
+<p><strong>Predefined Filters in Search Directory</strong></p>
+<p>It is possible to set a predefined filter in the Site Directory block.</p>
+<p><img src="../Images/omf-january-2018/SiteDirectoryPredefinedFilters.png" alt="Site Directory Predefined Filters" /></p>
+<p>The predefined filter can be used to set the scope of the directory. For example, it can be
+used to create a project only directory.</p>
+<p>It is also possible to filter the Search Directory and get a filter url.</p>
+<p><img src="../Images/omf-january-2018/GetFilterUrl.png" alt="Get Filter Url" /></p>
+<p>If you use this url, the Site Directory can be accessed with a default filter.</p>
+<h2 id="bug-fixes">Bug Fixes</h2>
+<ul>
+<li>Fixed issue with empty site titles in My Sites navigation due to a general change in the SharePoint search index online.</li>
+<li>Fixed issue with Office 365 groups appearing two times in the People/Group Picker.</li>
+<li>Term Picker now shows the complete path to the selected term to avoid the confusion when you have two terms with the same label in a term set.</li>
+<li>When a new page layout was deployed using a feature, it did not automatically appear in the list of available layouts. This has been fixed.</li>
+<li>Fixed problem with CSS style in Omnia making some out of the box web parts in SharePoint look bad.</li>
+<li>When going into edit mode, the Newsfeed block always says &quot;Sorry, only one user feed can be processed per page&quot;. This has been fixed.</li>
+<li>Certain types of SharePoint tasks did not end up in the My Tasks block because it was lacking a Content Class in the search index. This has been fixed.</li>
+<li>Better rendering of Newsfeed items in Quick Search.</li>
+<li>Fixed problem in SharePoint 2013 with display names of people in e-mails showing the user name instead of display name.</li>
+<li>Fixed problem in SharePoint 2013 with missing About me link when on quick pages.</li>
+<li>Fixed issue with published notification panel changes not being shown until the page was refreshed.</li>
+<li>Changed quick search to allow search over web applications in SharePoint 2013/2016.</li>
+</ul>
+<h2 id="january-2018-patch-1-1.0.9855">January 2018 Patch 1 (1.0.9855)</h2>
+<ul>
+<li>Fixed issue that could happen randomly when provisioning site properties to Office 365 groups.</li>
+<li>Made sure that the controlSettingsService API is backward compatible after a breaking change.</li>
+<li>Fixed an issue with the People and Group picker not showing all available security groups.</li>
+</ul>

@@ -1,0 +1,76 @@
+﻿<h1 id="site-templates">Site Templates</h1>
+<p>There are two different ways of implementing new site templates in Omnia:</p>
+<ol>
+<li><p>Implement through code (normally done by a programmer).</p>
+</li>
+<li><p>Creating new/edit templates by using the Site Templats functionality.</p>
+</li>
+</ol>
+<p>The first option does not necessarily rule out the second. A possible, and rather common scenario, is that a programmer implements a number of templates that a administrator then can edit to add some details.</p>
+<p>An important difference is that a programmer can lock parts of, or the whole site template. A locked template can't be deleted but can be edited, or be cloned to form the base for a new template created here. The News Center template is an example of a programmer implemented, locked site template.</p>
+<p>When you enter Site Templates, the existing templates are shown, for example:</p>
+<p><img src="../../Images/Site_Templates_1.png" alt="Site Templates Admin" /></p>
+<p>Any existing template can be downloaded as JSON (normally only used by programmers).</p>
+<h2 id="create-or-edit-template">Create or edit template</h2>
+<p>When you create or edit a template, the following fields and options can be used:</p>
+<p><img src="../../Images/add-template-new.png" alt="Site Templates Admin" /></p>
+<p>The first step when creating a new template is always to select &quot;Site collection&quot;, &quot;Sub site&quot; or &quot;Office 365 Group&quot;. For different kinds of Omnia team sites, you should normally select &quot;Site collection&quot;. If you would like to create a standard Office 365 group, click that option. In an Office 365 group you get all the standard tools, for example a group mail. An Office 365 group will be available in &quot;My sites&quot; the same way as the Omnia sites.</p>
+<h3 id="the-general-tab">The General tab</h3>
+<p><strong>Name</strong> The title of the template, shown under the image.</p>
+<p><strong>Language</strong> Select language for the template. On the &quot;Settings&quot; tab you can set if the user is allowed to change language or not. This option is not available for Office 365 Groups, language is in this case handled through Office 365.</p>
+<p><strong>Base template</strong> Select template to base the new template on. If in doubt, select &quot;Team site&quot;, it's the most commonly used. This option is not available for Office 365 Groups.</p>
+<p><strong>Location</strong> Select location for the sites created from this template. For a site collection site, you can select to create sites from this template in any of the managed paths, normally either /sites or /teams. For sub sites you can select that a site created from this template will be placed as a sub site to the current site, or in a certain path (recommended) for example /sites. This option is not available for Office 365 Groups.</p>
+<p><strong>Description</strong> Add important details for the template here, for example when this template should be used. The description is shown when the pointer is over the template.</p>
+<p><strong>Icon</strong> The icon is shown in the My sites lists for all sites created with this template, and in the site directory. Useful to, at a quick glance, see what type of site it is. You can use an icon from the built in set, or choose any image as an icon. Not mandatory. This option is not available for Office 365 Groups.</p>
+<p><strong>Image</strong> You can select any image for the template.</p>
+<h3 id="the-settings-tab">The Settings tab</h3>
+<p><strong>Permission Level</strong> Selecting &quot;Self Service&quot; means users can create sites from this template themselves. When you select &quot;Approver&quot; you must also add approver(s). Can be a person or a service account. A notification e-mail is sent to the approver(s) when a user requests a site. All requests are placed in the &quot;Site Requests&quot; list, see below. Approval can be useful to for example make sure name standards are used correctly or the correct template is used for the stated purpose.</p>
+<p><strong>Template Group</strong> You can use headings to group templates. This can be used in the settings for the My Sites control, to define which template group should be available when creating or requesting new sites, in a certain publishing portal.</p>
+<p><strong>Display To</strong> This can be used for targetting templates to a specific group of users.</p>
+<p><strong>Default Administrator</strong> If empty, the user creating or requesting the site will automatically become the administrator (Owner) of the site. If a specific group or user should be administrator for all sites created from this template, add that group or user. Not available for sub sites.</p>
+<p><strong>Default Secondary Administrator</strong> If empty, the user creating or requesting the site can set default secondary administrator of the site. If a specific group or user should be secondary administrator for all sites created from this template, add that group or user. Not available for sub sites or Office 365 Groups.</p>
+<p><strong>Default Visitors</strong> You can use this to set a default visitor group (read permissions) to all sites created from this template. Let's say it's a template for community pages - then probably all users of the intranet should have read permission to all pages in the site. Not available for Office 365 Groups.</p>
+<p><strong>Default member</strong> This option is available for Office 365 Groups only. If empty, the user creating the site will automatically become the default user (Owner) of the site. If a specific group or user should be default member for all sites created from this template, add that group or user.</p>
+<p><strong>Privacy</strong> This option is available for Office 365 Groups only. An Office 365 can be either public or private. In a public site alla users of the tenant can enter the site, read and edit all information. In a private sait only actual members of the site can do that.</p>
+<p><strong>Storage Quota (GBs)</strong> You can use this to set maximum storage in Gb that can be used by a site created from this template.</p>
+<p><strong>Default Time Zone</strong> Select default time zone. Can always be changed by the user when creating or requesting a site.</p>
+<p><strong>User can select language</strong> If the user, when creating or requesting a site, should be able to choose language, select this option. Not available for Office 365 Groups.</p>
+<p><strong>User can change privacy</strong> This option is available for Office 365 Groups only. When active, the user creating the group can change privacy. If not active, all Office 365 Groups will have the privacy setting you set here.</p>
+<p><strong>Unique Permissions</strong> Only available for sub sites. Check if permission inheritance should not be on for sub sites created from this template.
+See this page for more information on how to use Template Group:</p>
+<p><a href="/Docs/en-us/omnia-foundation-controls/my-sites/index.html">My Sites</a></p>
+<h3 id="the-features-tab">The Features tab</h3>
+<p>Select all Omnia features that should be active for sites created from this template. Note that some features are needed in order for notifications to work, for example &quot;Omnia Team Site - Announcements&quot;.</p>
+<p>Note that all features are not available for sub sites or Office 365 Groups. These features will be set on site collection level.</p>
+<p>See more information about the fetures in the section &quot;Site Scoped Omnia Features&quot; on this page:</p>
+<p><a href="/Docs/en-us/omnia-admin/omnia-foundation-features/index.html">Omnia Foundation Features</a></p>
+<p><a href="/Docs/en-us/omnia-intranet-features/index.html">Omnia Intranet Features</a></p>
+<h3 id="the-properties-tab">The Properties tab</h3>
+<p>The Properties tab is available for Site collection sites and Sub sites, but not for Office 365 Groups.</p>
+<p>You can define up to six properties to be used for all sites created from this template. The properties are used for example in Site Directory and in Site Quick Edit.</p>
+<p>The first step is to select &quot;Field type&quot; in the list. For &quot;Managed metadata&quot; you have to select a term set. For &quot;Enterprise Keywords&quot; no settings can be done. Enterprise Keywords are always shared throughout the tenant.</p>
+<p>For each property you can set:</p>
+<p><strong>Mandatory</strong> - mandatory or not.</p>
+<p><strong>Multiple</strong> - if multiple choices should be allowed.</p>
+<p><strong>Filterable</strong> - If the field should be available for filtering in the site directory, select this option.</p>
+<p><strong>Viewable</strong> - If information from this field should be displayed in the Site Directory list, select this option.</p>
+<p>If changes for the properties are made in an existing site template, the changes will be pushed to all existing sites created from the template. If there are many sites created from the template, this can take considerable time to execute.</p>
+<p><strong>Note!</strong> If a properties field is removed from a site template, all data for this field, in all sites created from the template, will be deleted.</p>
+<p>See these pages for more information on Site Directory and Site Quick Edit:</p>
+<p><a href="/Docs/en-us/omnia-foundation-controls/site-directory/index.html">Site Directory</a></p>
+<p><a href="/Docs/en-us/omnia-foundation-controls/site-quick-edit/index.html">Site Quick Edit</a></p>
+<h2 id="site-requests">Site requests</h2>
+<p>When &quot;Approval&quot; is selected for any site templates, all requests are placed in this list. Selections and properties can be edited if needed. From this list an administrator can see the settings and approve or reject the site.</p>
+<p><img src="../../Images/siterequest_1.png" alt="Site Requests" /></p>
+<p>Click a link to browse the settings and properties. The last step is to approve or reject the site.</p>
+<p><img src="../../Images/siterequest_2.png" alt="Site Requests" /></p>
+<p>If &quot;Approve&quot; is selected the site is created. If &quot;Reject&quot; is selected, a form is displayed where comments on why the site request was rejected should be entered.</p>
+<p><img src="../../Images/siterequest_3.png" alt="Site Requests" /></p>
+<p>If a site request is rejected, an e-mail is sent to the requester. A new site request must then be done.</p>
+<h2 id="settings">Settings</h2>
+<p>Use Settings to disable dynamic properties for some site templates, if needed.</p>
+<p><img src="../../Images/site-template-settings.png" alt="Site Template settings" /></p>
+<p>Use the list to additional sites to disable dynamic properties in. To remove a site (to enable dynamic properties) click the dust bin.</p>
+<h2 id="permissions">Permissions</h2>
+<p>If additional users should be able to create site templates, use &quot;Permissions&quot; to add them.</p>
+<p><img src="../../Images/site-template-permissions.png" alt="Site Template permissions" /></p>
