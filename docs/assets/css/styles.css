@@ -1165,3 +1165,8 @@ select {
 #doc-menu, .form-control:focus {
 	border-color: #e57e14;
 }
+
+#div_content img {
+	max-width: 100%;
+}
+
