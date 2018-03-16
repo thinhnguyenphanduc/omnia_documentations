@@ -5,7 +5,7 @@
         if (isActive) {
             docMenuNode += `<li class='active'> <a href='${doc.href}' data-documentation='${doc.slug}'>${
                 doc.name}</a>`;
-            isActive = false;
+            isActive = false; 
         } else {
             docMenuNode += `<li> <a href='${doc.href}' data-documentation='${doc.slug}'>${doc.name}</a>`;
         }
