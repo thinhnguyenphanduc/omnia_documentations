@@ -6,7 +6,7 @@ $(document).ready(function() {
     /* Activate scrollspy menu */
     $('body').scrollspy({ target: '#doc-nav', offset: 100 });
 
-    // Create navigation menu
+    // Create navigation menu 
     $.getJSON("assets/data/menu.json", function (menu) {     
         const docMenu = createDocMenu(menu);
         $("#doc-menu").html(docMenu);
