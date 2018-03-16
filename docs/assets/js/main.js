@@ -13,7 +13,7 @@ $(document).ready(function() {
         
         // Click on navigation bar
         $("a").on("click", function (e) {
-            handleHTML(e, this);
+            handleHTML(e, this); 
         });
 
         // Click on links in Div_Content
