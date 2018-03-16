@@ -285,7 +285,7 @@
           url = url.replace("../",href + "OmniaIntranetDocument/Docs/" + $('#language').val() + "/");
           $(this).attr('src',url);        
         });    
-        $('#div_content').html(response);
+        $('#div_content').innerHTML= response;
        
         // Set data-documentation to every a tag
         $('#div_content a').each(function(){
