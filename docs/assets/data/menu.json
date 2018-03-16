@@ -1,0 +1,56 @@
+[
+  {
+    "name": "Omnia Intranet",
+    "slug": "Omnia.Intranet.Document",
+    "href": "/Docs/en-us/index.html",
+    "subTitle": [
+      {
+        "name": "Introduction to Navigation and Search",
+        "slug": "Omnia.Intranet.Document",
+        "href": "/Docs/en-us/introduction-to-navigation-and-search/index.html"
+      },
+      {
+        "name": "Introduction to Feed and Notification",
+        "slug": "Omnia.Intranet.Document",
+        "href": "/Docs/en-us/introduction-to-feeds-and-notifications/index.html"
+      },
+      {
+        "name": "Introduction to News",
+        "slug": "Omnia.Intranet.Document",
+        "href": "/Docs/en-us/introduction-to-news-center/index.html"
+      },
+      {
+        "name": "Introduction to Team Sites",
+        "slug": "Omnia.Intranet.Document",
+        "href": "/Docs/en-us/introduction-to-team-sites/index.html"
+      },
+      {
+        "name": "Introduction to Content Management",
+        "slug": "Omnia.Intranet.Document",
+        "href": "/Docs/en-us/introduction-to-content-management/index.html"
+      }
+    ]
+  },
+  {
+    "name": "Omnia Foundation",
+    "slug": "Omnia.Foundation.Documentation",
+    "href": "/Docs/en-us/index.html",
+    "subTitle": [
+      {
+        "name": "Introduction Foundation Admin",
+        "slug": "Omnia.Foundation.Documentation",
+        "href": "/Docs/en-us/omnia-foundation-features/index.html"
+      },
+      {
+        "name": "Introduction Foundation Controls",
+        "slug": "Omnia.Foundation.Documentation",
+        "href": "/Docs/en-us/omnia-foundation-admin/index.html"
+      },
+      {
+        "name": "Introduction Foundation Features",
+        "slug": "Omnia.Foundation.Documentation",
+        "href": "/Docs/en-us/omnia-foundation-controls/index.html"
+      }
+    ]
+  }
+]
