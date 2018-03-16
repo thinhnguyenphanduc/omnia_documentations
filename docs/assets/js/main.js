@@ -11,7 +11,7 @@ $(document).ready(function() {
         const docMenu = createDocMenu(menu);
         $("#doc-menu").html(docMenu);
     });
-
+ 
     // Get default content   
     
 });
