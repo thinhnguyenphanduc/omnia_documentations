@@ -273,7 +273,9 @@
     if(targetHref.indexOf("#") < 0 && targetHref.indexOf("http") != 0 ) // In case, there is # or external url
     {
       e.preventDefault();
+	    console.log("preventDefault");
       $('#div_content').load(href + "OmniaIntranetDocument" + targetHref, function(response, status) {
+	      console.log("loadDivContent");
         // Change src of img tags
         $('#div_content img').each(function(){
           var url = $(this).attr('src');
