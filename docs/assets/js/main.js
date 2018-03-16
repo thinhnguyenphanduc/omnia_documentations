@@ -1,4 +1,4 @@
-$(document).ready(function() {  
+$(document).ready(function() {
     $(window).on('load resize', function() {
         $(window).trigger('scroll');
     });
