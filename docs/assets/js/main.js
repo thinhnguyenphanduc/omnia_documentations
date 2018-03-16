@@ -25,4 +25,3 @@ $(document).ready(function() {
         getHTML($(location).attr('href'), menu[0].href, menu[0].slug); 
     });
 });
- 
