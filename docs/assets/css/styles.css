@@ -409,7 +409,8 @@ select {
   background: #f9f9fb;
 }
 .doc-body {
-  position: relative;
+	position: relative;
+	margin-top: 55px;
 }
 .doc-header {
   margin-bottom: 30px;
