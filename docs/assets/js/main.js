@@ -25,9 +25,7 @@ $(document).ready(function() {
         getHTML($(location).attr('href'), menu[0].href, menu[0].slug); 
         
         // Search event
-        $('#documentations').on('input',function (e) {
-            
-            var options = {
+        var options = {
             data: menu,
 
             getValue: "name",
@@ -40,8 +38,6 @@ $(document).ready(function() {
             }
         };
 
-        $("#documentations").easyAutocomplete(options);
-            
-        }); 
+        $("#documentations").easyAutocomplete(options);        
     });
 });
