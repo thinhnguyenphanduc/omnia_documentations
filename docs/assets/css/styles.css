@@ -1163,6 +1163,6 @@ select {
 }
 
 #doc-nav {
-	postion: fixed;
+	postion: fixed !important;
 }
 
