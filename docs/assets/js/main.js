@@ -22,7 +22,9 @@ $(document).ready(function() {
         });
 
         // Load default content
-        getHTML($(location).attr('href'), "/Docs/en-us/index.html", "Omnia.Intranet.Document"); // TODO: targetHref, data-documentation
+        console.log("json menu: " + menu[0].href);
+        console.log("json menu: " + menu[0].slug);
+        getHTML($(location).attr('href'), menu[0].href, menu[0].slug); 
     });
 });
  
