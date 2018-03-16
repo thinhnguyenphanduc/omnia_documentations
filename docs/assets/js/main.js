@@ -21,9 +21,7 @@ $(document).ready(function() {
             handleHTML(e, this);
         });
 
-        // Load default content
-        console.log("json menu: " + menu[0].href);
-        console.log("json menu: " + menu[0].slug);
+        // Load default content       
         getHTML($(location).attr('href'), menu[0].href, menu[0].slug); 
     });
 });
