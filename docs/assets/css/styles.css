@@ -1162,7 +1162,7 @@ select {
 	max-width: 100% !important;
 }
 
-#doc-nav {
+.doc-sidebar {
 	postion: fixed !important;
 }
 
