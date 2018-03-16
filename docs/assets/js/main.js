@@ -19,7 +19,7 @@ $(document).ready(function() {
 /*Click on navigation bar*/
 $("a").on("click",
     function (e) {
-        console.log("Click on navigation bar");
+        alert("Click on navigation bar");
         handleHTML(e, this);
     });
 
@@ -27,7 +27,7 @@ $("a").on("click",
 $("#div_content").on("click",
     "a",
     function (e) {
-        console.log("Click on navigation bar #div_content");
+        alert("Click on navigation bar #div_content");
         handleHTML(e, this);
     });
 
