@@ -71,5 +71,3 @@ function handleHTML(e, pointer) {
         getHTML(href, targetHref, data_documentation);
     }
 }
-
-
