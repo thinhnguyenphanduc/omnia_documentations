@@ -12,22 +12,21 @@ $(document).ready(function() {
         $("#doc-menu").html(docMenu);
     });
 
-    // Get default content
-
+    // Get default content   
     
-    /*Click on navigation bar*/
-    $("a").on("click",
-        function (e) {
-            handleHTML(e, this);
-        });
-
-    /*Clicl on links in Div_Content*/
-    $("#div_content").on("click",
-        "a",
-        function (e) {
-            handleHTML(e, this);
-        });
 });
 
 
+/*Click on navigation bar*/
+$("a").on("click",
+    function (e) {
+        handleHTML(e, this);
+    });
+
+/*Clicl on links in Div_Content*/
+$("#div_content").on("click",
+    "a",
+    function (e) {
+        handleHTML(e, this);
+    });
 
