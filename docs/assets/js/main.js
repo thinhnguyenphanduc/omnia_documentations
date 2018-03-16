@@ -25,7 +25,7 @@ $(document).ready(function() {
         getHTML($(location).attr('href'), menu[0].href, menu[0].slug); 
         
         // Search event
-        $('#documentations').on('input',function(e){
+        $('#documentations').on('input',function (e) {
             alert('Changed!')
         }); 
     });
