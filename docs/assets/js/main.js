@@ -16,18 +16,16 @@ $(document).ready(function() {
     
 });
 
-/*Click on navigation bar*/
-$("a").on("click",
-    function (e) {
+(function(){
+    /*Click on navigation bar*/
+    $("a").on("click", function (e) {
         alert("Click on navigation bar");
         handleHTML(e, this);
     });
 
-/*Clicl on links in Div_Content*/ 
-$("#div_content").on("click",
-    "a",
-    function (e) {
+    /*Clicl on links in Div_Content*/ 
+    $("#div_content").on("click","a", function (e) {
         alert("Click on navigation bar #div_content");
         handleHTML(e, this);
     });
-
+})();
