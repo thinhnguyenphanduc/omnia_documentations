@@ -22,7 +22,7 @@ $(document).ready(function() {
         });
 
         // Load default content
-        getHTML($(location).attr('href'), "/Docs/en-us/index.html", "Omnia.Intranet.Document");
+        getHTML($(location).attr('href'), "/Docs/en-us/index.html", "Omnia.Intranet.Document"); // TODO: targetHref, data-documentation
     });
 });
  
