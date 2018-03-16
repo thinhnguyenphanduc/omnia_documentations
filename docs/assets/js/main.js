@@ -35,6 +35,16 @@ $(document).ready(function() {
                 fields: {
                     description: "slug"
                 }
+            },
+            list: {
+                onSelectItemEvent: function() {
+                    var href = $("#function-data").getSelectedItemData().href;
+                    var slug = $("#function-data").getSelectedItemData().slug;
+			        $("#data-holder").val(value).trigger("change");
+                    console.log(href);
+                    console.log(slug);
+                    getHTML($(location).attr('href'), href, slug);                     
+                }	
             }
         };
 
