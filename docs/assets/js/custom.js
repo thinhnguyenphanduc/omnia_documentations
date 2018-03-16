@@ -25,8 +25,8 @@
 };
 
 // Get html from url
-function getHTML(id, targetHref) {
-     $(id).load(href + $(pointer).attr("data-documentation") + targetHref,
+function getHTML(href, targetHref) {
+    $("#div_content").load(href + $(pointer).attr("data-documentation") + targetHref,
          function (response, status) {
              console.log("loadDivContent");
              // Change src of img tags
@@ -46,7 +46,7 @@ function getHTML(id, targetHref) {
                      url;
                  $(this).attr('src', url);
              });
-             $(id).innerHTML = response;
+             $("#div_content").innerHTML = response;
 
              // Set data-documentation to every a tag
              $('#div_content a').each(function () {
@@ -72,7 +72,7 @@ function handleHTML(e, pointer) {
     if (targetHref.indexOf("#") < 0 && targetHref.indexOf("http") != 0) // In case, there is # or external url
     {
         e.preventDefault();
-        getHTML("#div_content", targetHref);
+        getHTML(href, targetHref);
     }
 }
 

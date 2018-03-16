@@ -22,6 +22,6 @@ $(document).ready(function() {
         });
 
         // Load default content
-        getHTML("#div_content", "/Docs/en-us/index.html");
+        getHTML($(location).attr('href'), "/Docs/en-us/index.html");
     });
 });
