@@ -287,11 +287,12 @@
         $('#div_content img').each(function(){
           var url = $(this).attr('src');
           // More than one ../
-          while (url.indexOf("../../") >= 0) {            
-              url = url.replace("../../","../");            
+          while (url.indexOf("../") >= 0) {            
+              url = url.replace("../","");            
           }               
+	  
           // Append complete url
-          url = url.replace("../",href + $(pointer).attr("data-documentation") + "/Docs/" + $('#language').val() + "/");
+          url = href + $(pointer).attr("data-documentation") + "/Docs/" + $('#language').val() + "/" + url;
           $(this).attr('src',url);        
         });    
         $('#div_content').innerHTML= response;
