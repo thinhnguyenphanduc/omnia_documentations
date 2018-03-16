@@ -23,7 +23,7 @@ $("a").on("click",
         handleHTML(e, this);
     });
 
-/*Clicl on links in Div_Content*/
+/*Clicl on links in Div_Content*/ 
 $("#div_content").on("click",
     "a",
     function (e) {
