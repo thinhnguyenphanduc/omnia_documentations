@@ -1,7 +1,7 @@
  function createDocMenu(documents) { 
     var docMenuNode = "<li><input id='documentations' placeholder='Search...' class='form-control'/></li>";
     var isActive = true;
-    documents.forEach(function (doc) {
+    documents.forEach(function (doc) { 
         if (isActive) {
             docMenuNode += `<li class='active'> <a class='nav-level1' href='${doc.href}' data-documentation='${doc.slug}'>${
                 doc.name}</a>`;
