@@ -61,18 +61,14 @@ function handleHTML(e, pointer) {
     // Clear id-based element movement
     const endPos = href.indexOf("/#");
     if (endPos > 0) {
-        href = href.slice(0, (endPos + 1));
-        // Clear url and append # at the end of url
-        window.location = href + "#";
+        href = href.slice(0, (endPos + 1));        
     }
     var data_documentation = $(pointer).attr("data-documentation");    
     // Load html to div tag
     if (targetHref.indexOf("#") < 0 && targetHref.indexOf("http") != 0) // In case, there is # or external url
     {
         e.preventDefault();
-        getHTML(href, targetHref, data_documentation);
-        // Append # at the end of url
-        window.location = href + "#";
+        getHTML(href, targetHref, data_documentation);        
     }
 }
 
