@@ -37,9 +37,7 @@ $(document).ready(function() {
         // Search event
         var options = {
             data: menu,
-
             getValue: "name",
-
             template: {
                 type: "description",
                 fields: {
@@ -47,6 +45,9 @@ $(document).ready(function() {
                 }
             },
             list: {
+	        match: {
+			enabled: true
+		},
                 onClickEvent: function() {
 		    var name = $("#documentations").getSelectedItemData().name;
                     var href = $("#documentations").getSelectedItemData().href;
