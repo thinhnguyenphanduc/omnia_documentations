@@ -10,7 +10,7 @@
             docMenuNode += `<li> <a class='nav-level1' href='${doc.href}' data-documentation='${doc.slug}'>${doc.name}</a>`;
         }
         // Icon for collapse/hide
-        docMenuNode += `<span class='glyphicon glyphicon-list pull-right' style='margin-top: -25px' data-toggle='collapse' data-target='${doc.slug}'></span>`
+        docMenuNode += `<span class='glyphicon glyphicon-list pull-right' style='margin-top: -25px' data-toggle='collapse' data-target='#${doc.slug}'></span>`
 
         if (doc.subTitle.length > 0) {
             docMenuNode += `<ul class='nav doc-sub-menu collapse' id='${doc.slug}'>`;
