@@ -9,9 +9,11 @@
         } else {
             docMenuNode += `<li> <a class='nav-level1' href='${doc.href}' data-documentation='${doc.slug}'>${doc.name}</a>`;
         }
+        // Icon for collapse/hide
+        docMenuNode += `<span class='glyphicon glyphicon-list pull-right' style='margin-top: -25px' data-toggle='collapse' data-target='${doc.slug}'></span>`
 
         if (doc.subTitle.length > 0) {
-            docMenuNode += "<ul class='nav doc-sub-menu'>";
+            docMenuNode += `<ul class='nav doc-sub-menu' id='${doc.slug}' class='collapse'>`;
             doc.subTitle.forEach(function (subDoc) {
                 docMenuNode += `<li> <a class='nav-level2' href='${subDoc.href}' data-documentation='${subDoc.slug}'>${subDoc.name
                     }</a></li>`;
