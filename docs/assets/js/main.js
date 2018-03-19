@@ -57,7 +57,21 @@ $(document).ready(function() {
                 }	
             }
         };
-
-        $("#documentations").easyAutocomplete(options);        
+        $("#documentations").easyAutocomplete(options);      
     });
+    
+    $(window).bind("beforeunload", function(){
+	var href = $(location).attr('href');
+        // Clear id-based element movement
+        const endPos = href.indexOf("/#");
+        if (endPos > 0) {                
+            var hash = href.slice(href.indexOf("#"));
+            // The root href
+            href = href.slice(0, (endPos + 1));            
+            // Clean uri
+            window.history.replaceState({}, hash, href);              
+        }
+        return confirm("Do you really want to refresh?"); 
+    });
+
 });
