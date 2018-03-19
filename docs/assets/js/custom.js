@@ -71,3 +71,8 @@ function handleHTML(e, pointer) {
         getHTML(href, targetHref, data_documentation);
     }
 }
+
+// Navigation Status
+function navigationStatus(menu, pointer){
+    $("#active-doc").text($(pointer).text());
+}
