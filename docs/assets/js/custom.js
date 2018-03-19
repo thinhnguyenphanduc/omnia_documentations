@@ -67,7 +67,7 @@ function handleHTML(e, pointer) {
     // Clear id-based element movement
     const endPos = href.indexOf("/#");
     if (endPos > 0) {                
-        var hash = href.slice(hash.indexOf("#"));
+        var hash = href.slice(href.indexOf("#"));
         // The root href
         href = href.slice(0, (endPos + 1));            
         // Clean uri
