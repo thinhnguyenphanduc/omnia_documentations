@@ -7,7 +7,7 @@
                 doc.name}</a>`;
             isActive = false; 
         } else {
-            docMenuNode += `<li> <a href='${doc.href}' data-documentation='${doc.slug}'>${doc.name}</a>`;
+            docMenuNode += `<li> <a class='nav-level1' href='${doc.href}' data-documentation='${doc.slug}'>${doc.name}</a>`;
         }
 
         if (doc.subTitle.length > 0) {
@@ -79,7 +79,7 @@ function navigationStatus(menu, pointer){
      $("#active-doc").text($(pointer).text());
     } else if($(pointer).hasClass("nav-level2"))
     {
-     var level1_el = $(pointer).parent().parent().children().first().text();
-     $("#active-doc").text(level1_el + $(pointer).text());
+     var level1_el = $(pointer).parent().parent().parent().children().first().text();
+     $("#active-doc").text(level1_el + " | " + $(pointer).text());
     }    
 }
