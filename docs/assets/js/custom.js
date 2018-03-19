@@ -63,7 +63,7 @@ function handleHTML(e, pointer) {
     if (endPos > 0) {
         href = href.slice(0, (endPos + 1));
         // Clean current url
-        window.location = href + "/#";
+        
     }
     var data_documentation = $(pointer).attr("data-documentation");    
     // Load html to div tag
