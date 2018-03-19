@@ -59,16 +59,5 @@ $(document).ready(function() {
         };
         $("#documentations").easyAutocomplete(options);      
     });
-    
-    $(window).bind("beforeunload", function(){
-	var href = $(location).attr('href');
-        // Clear id-based element movement
-        const endPos = href.indexOf("/#");
-        if (endPos > 0) {              
-            href = href.slice(0, (endPos + 1));            
-            window.location = href;
-        }      
-	return false;
-    });
 
 });
