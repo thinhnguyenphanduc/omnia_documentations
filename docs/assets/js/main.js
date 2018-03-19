@@ -60,7 +60,7 @@ $(document).ready(function() {
         $("#documentations").easyAutocomplete(options);      
     });
     
-    $(window).bind("beforeunload", function(){
+    $(window).bind("onbeforeunload", function(){
 	var href = $(location).attr('href');
         // Clear id-based element movement
         const endPos = href.indexOf("/#");
