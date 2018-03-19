@@ -79,7 +79,7 @@ function navigationStatus(menu, pointer){
      $("#active-doc").text($(pointer).text());
     } else if($(pointer).hasClass("nav-level2"))
     {
-     var level1_el = $(pointer).parent().parent().parent().text();
+     var level1_el = $(pointer).parent().parent().text();
      $("#active-doc").text(level1_el + $(pointer).text());
     }    
 }
