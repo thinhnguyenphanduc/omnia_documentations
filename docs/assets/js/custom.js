@@ -1,4 +1,4 @@
- function createDocMenu(documents) { 
+ function createDocMenu(documents) {  
     var docMenuNode = "<li><input id='documentations' placeholder='Search...' class='form-control'/></li>";
     var isActive = true;
     documents.forEach(function (doc) { 
