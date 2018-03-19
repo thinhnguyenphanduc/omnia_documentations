@@ -62,6 +62,8 @@ function handleHTML(e, pointer) {
     const endPos = href.indexOf("/#");
     if (endPos > 0) {
         href = href.slice(0, (endPos + 1));
+        // Clear url and append # at the end of url
+        window.location = href + "#";
     }
     var data_documentation = $(pointer).attr("data-documentation");    
     // Load html to div tag
@@ -69,6 +71,8 @@ function handleHTML(e, pointer) {
     {
         e.preventDefault();
         getHTML(href, targetHref, data_documentation);
+        // Append # at the end of url
+        window.location = href + "#";
     }
 }
 
