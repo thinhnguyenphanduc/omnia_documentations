@@ -66,8 +66,12 @@ function handleHTML(e, pointer) {
     var href = $(location).attr('href');
     // Clear id-based element movement
     const endPos = href.indexOf("/#");
-    if (endPos > 0) {
-        href = href.slice(0, (endPos + 1));        
+    if (endPos > 0) {                
+        var hash = href.slice(hash.indexOf("#"));
+        // The root href
+        href = href.slice(0, (endPos + 1));            
+        // Clean uri
+        window.history.replaceState({}, hash, href);              
     }
     var data_documentation = $(pointer).attr("data-documentation");    
     // Load html to div tag
