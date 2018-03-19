@@ -22,6 +22,15 @@ $(document).ready(function() {
             handleHTML(e, this);
         });
 
+	// Active event on Nav
+	$('.nav li').click(function(e) {
+	    $('.nav li').removeClass('active');
+	    var $this = $(this);
+	    if (!$this.hasClass('active')) {
+	        $this.addClass('active');
+	    }		
+    	});
+	    
         // Load default content       
         getHTML($(location).attr('href'), menu[0].href, menu[0].slug); 
         
