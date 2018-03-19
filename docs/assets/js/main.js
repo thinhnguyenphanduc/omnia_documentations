@@ -2,7 +2,7 @@ $(document).ready(function() {
     $(window).on('load resize', function() {
         $(window).trigger('scroll');
     });
-    
+  
     /* Activate scrollspy menu */ 
     $('body').scrollspy({ target: '#doc-nav', offset: 100 });
 
