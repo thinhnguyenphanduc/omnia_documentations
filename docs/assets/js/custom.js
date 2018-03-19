@@ -3,7 +3,7 @@
     var isActive = true;
     documents.forEach(function (doc) {
         if (isActive) {
-            docMenuNode += `<li class='active'> <a href='${doc.href}' data-documentation='${doc.slug}'>${
+            docMenuNode += `<li class='active'> <a class='nav-level1' href='${doc.href}' data-documentation='${doc.slug}'>${
                 doc.name}</a>`;
             isActive = false; 
         } else {
@@ -13,7 +13,7 @@
         if (doc.subTitle.length > 0) {
             docMenuNode += "<ul class='nav doc-sub-menu'>";
             doc.subTitle.forEach(function (subDoc) {
-                docMenuNode += `<li> <a href='${subDoc.href}' data-documentation='${subDoc.slug}'>${subDoc.name
+                docMenuNode += `<li> <a class='nav-level2' href='${subDoc.href}' data-documentation='${subDoc.slug}'>${subDoc.name
                     }</a></li>`;
             });
             docMenuNode += "</ul>";
@@ -74,5 +74,12 @@ function handleHTML(e, pointer) {
 
 // Navigation Status
 function navigationStatus(menu, pointer){
-    $("#active-doc").text($(pointer).text());
+    if($(pointer).hasClass("nav-level1"))
+    {
+     $("#active-doc").text($(pointer).text());
+    } else if($(pointer).hasClass("nav-level2"))
+    {
+     var level1_el = $(pointer).parent().parent().parent().text();
+     $("#active-doc").text(level1_el + $(pointer).text());
+    }    
 }
