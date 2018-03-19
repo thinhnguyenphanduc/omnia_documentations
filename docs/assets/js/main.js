@@ -64,14 +64,10 @@ $(document).ready(function() {
 	var href = $(location).attr('href');
         // Clear id-based element movement
         const endPos = href.indexOf("/#");
-        if (endPos > 0) {                
-            var hash = href.slice(href.indexOf("#"));
-            // The root href
+        if (endPos > 0) {              
             href = href.slice(0, (endPos + 1));            
-            // Clean uri
-            window.history.replaceState({}, hash, href);              
-        }
-        return confirm("Do you really want to refresh?"); 
+            window.location = href;
+        }        
     });
 
 });
