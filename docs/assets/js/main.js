@@ -13,7 +13,7 @@ $(document).ready(function() {
         
         // Click on navigation bar
         $("#doc-menu a").on("click", function (e) {	
-	    $("#active-doc").text($(this).text());
+	    navigationStatus(menu, this);
             handleHTML(e, this);
         });
 
