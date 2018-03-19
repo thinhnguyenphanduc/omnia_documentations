@@ -1,5 +1,5 @@
 $(document).ready(function() {  
-    $(window).on('load resize', function() {
+    $(window).on('load resize', function() { 
         $(window).trigger('scroll');
     }); 
 
