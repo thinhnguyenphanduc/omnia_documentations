@@ -10,7 +10,7 @@
             docMenuNode += `<li> <a class='nav-level1' href='${doc.href}' data-documentation='${doc.slug}'>${doc.name}</a>`;
         }
         // Icon for collapse/hide
-        var toggleElement = doc.slug;
+        var toggleElement = doc.name;
         while (toggleElement.indexOf(" ") >= 0) {
                toggleElement = toggleElement.replace(" ", "_");
         }
