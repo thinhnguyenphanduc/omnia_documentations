@@ -34,22 +34,22 @@
   {
     "name": "Omnia Foundation",
     "slug": "Omnia.Foundation.Documentation",
-    "href": "/Docs",
+    "href": "/Docs/language/index.html",
     "subTitle": [
       {
         "name": "Introduction Foundation Admin",
         "slug": "Omnia.Foundation.Documentation",
-        "href": "/Docs/en-us/omnia-foundation-features/index.html"
+        "href": "/Docs/language/omnia-foundation-features/index.html"
       },
       {
         "name": "Introduction Foundation Controls",
         "slug": "Omnia.Foundation.Documentation",
-        "href": "/Docs/en-us/omnia-foundation-admin/index.html"
+        "href": "/Docs/language/omnia-foundation-admin/index.html"
       },
       {
         "name": "Introduction Foundation Features",
         "slug": "Omnia.Foundation.Documentation",
-        "href": "/Docs/en-us/omnia-foundation-controls/index.html"
+        "href": "/Docs/language/omnia-foundation-controls/index.html"
       }
     ]
   }
