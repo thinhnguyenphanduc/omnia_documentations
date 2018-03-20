@@ -12,7 +12,8 @@ $(document).ready(function() {
         $("#doc-menu").html(docMenu);
         
         // Click on navigation bar
-        $("#doc-menu a").on("click", function (e) {		    
+        $("#doc-menu a").on("click", function (e) {	
+	    e.preventDefault();
 	    navigationStatus(menu, this);
 	    // Languge Based-On
 	    var urlLanguageBasedOn = $(this).attr("href") + "/" + $('#language').val() + "/index.html";
