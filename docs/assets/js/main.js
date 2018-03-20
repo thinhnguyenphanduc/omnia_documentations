@@ -15,7 +15,10 @@ $(document).ready(function() {
 	    e.preventDefault();
 	    navigationStatus(menu, this);
 	    // Languge Based-On
-	    var urlLanguageBasedOn = $(this).attr("href") + "/" + $('#language').val() + "/index.html";
+	    var urlLanguageBasedOn = $(this).attr("href");
+	    if (urlLanguageBasedOn.indexOf("language") >= 0) {
+                     urlLanguageBasedOn = urlLanguageBasedOn.replace("language", $('#language').val());
+            }	    
             getHTML($(location).attr('href'), urlLanguageBasedOn, $(this).attr("data-documentation"));
         });
 
