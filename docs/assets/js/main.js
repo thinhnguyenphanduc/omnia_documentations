@@ -11,7 +11,7 @@ $(document).ready(function() {
         const docMenu = createDocMenu(menu);
         $("#doc-menu").html(docMenu);
         
-	// Load default content  	
+	// Load default content
         getHTML($(location).attr('href'), urlLanguageBasedOnChange(menu[0].href), menu[0].slug); 
 	    
         // Click on navigation bar
