@@ -93,3 +93,12 @@ function navigationStatus(menu, pointer){
      $("#active-doc").text(level1_el + " | " + $(pointer).text());
     }    
 }
+
+// URL Language-BasedOn
+function urlLanguageBasedOnChange(url){
+    var urlLanguageBasedOn = url;
+    if (urlLanguageBasedOn.indexOf("language") >= 0) {
+              urlLanguageBasedOn = urlLanguageBasedOn.replace("language", $('#language').val());
+       }
+    return urlLanguageBasedOn;
+}
