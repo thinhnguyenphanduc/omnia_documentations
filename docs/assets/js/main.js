@@ -11,20 +11,15 @@ $(document).ready(function() {
         const docMenu = createDocMenu(menu);
         $("#doc-menu").html(docMenu);
         
-	// Load default content       	
-	var urlLanguageBasedOn = urlLanguageBasedOnChange(menu[0].href);
-        getHTML($(location).attr('href'), urlLanguageBasedOn, menu[0].slug); 
+	// Load default content  	
+        getHTML($(location).attr('href'), urlLanguageBasedOnChange(menu[0].href), menu[0].slug); 
 	    
         // Click on navigation bar
         $("#doc-menu a").on("click", function (e) {	
 	    e.preventDefault();
 	    navigationStatus(menu, this);
-	    // Languge Based-On
-	    var urlLanguageBasedOn = $(this).attr("href");
-	    if (urlLanguageBasedOn.indexOf("language") >= 0) {
-                     urlLanguageBasedOn = urlLanguageBasedOn.replace("language", $('#language').val());
-            }	    
-            getHTML($(location).attr('href'), urlLanguageBasedOn, $(this).attr("data-documentation"));
+	    // Languge Based-On	    	    	    
+            getHTML($(location).attr('href'), urlLanguageBasedOnChange($(this).attr("href")), $(this).attr("data-documentation"));
         });
 
         // Click on links in Div_Content
