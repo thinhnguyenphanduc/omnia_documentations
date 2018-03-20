@@ -11,6 +11,10 @@ $(document).ready(function() {
         const docMenu = createDocMenu(menu);
         $("#doc-menu").html(docMenu);
         
+	// Load default content       	
+	var urlLanguageBasedOn = urlLanguageBasedOnChange(menu[0].href);
+        getHTML($(location).attr('href'), urlLanguageBasedOn, menu[0].slug); 
+	    
         // Click on navigation bar
         $("#doc-menu a").on("click", function (e) {	
 	    e.preventDefault();
@@ -36,10 +40,7 @@ $(document).ready(function() {
 	        $this.addClass('active');
 	    }		
     	});
-	    
-        // Load default content       
-        getHTML($(location).attr('href'), menu[0].href, menu[0].slug); 
-        
+
         // Search event
         var options = {
             data: menu,
